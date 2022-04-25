@@ -19,8 +19,8 @@ Sommige images die worden gebruikt zijn tussen de 40px en 60px breed. Terwijl de
 ### First Contentful Paint (FCP)
 De performance score van Github is 82 op Desktop. Er zijn een paar verbeter punten waarmee ze de score omhoog kunnen krijgen.
 
-**Eliminate render-blockink resources**
-//
+**Eliminate render-blocking resources**
+Er zijn bepaalde resources die worden ingeladen en daardoor de FCP blocken. Deze kunnen worden opgelost door bijvoorbeeld inline styling te gebruiken doormiddel van een ```<style></style>``` tag of een ```<script></script>```
 
 **Reduce unused CSS**
 Er zijn een paar regels in de CSS bestanden van github die niet worden gebruikt. Als ze deze zouden verwijderen zou de FCP sneller moeten laden.
@@ -30,11 +30,15 @@ Aangezien de images die worden geladen al iets te groot zijn, zouden ze dit ook 
 
 
 ### Time to Interactive (TTI)
+Om de TTI snelheid te verbeteren kan Github een paar dingen doen:
+
+- De render-blocking resources fixen waardoor de FCP sneller word gemaakt en ze ook sneller door kunnen naar de TTI
+- De JavaScript execution time verlagen (denk aan compression of minify)
+
 ### Speed Index
-_Beschrijf de uitslag van de SI van de test en toon de resultaten. Beschrijf wat kan worden verbeterd als de score minder dan 90 is._
+De speed index kan worden verbeterd door de FCP te verbeteren.
 
 ### Total Blocking Time (TBT)
-_Beschrijf de uitslag van de TBT van de test en toon de resultaten. Beschrijf wat kan worden verbeterd als de score minder dan 90 is._
 
 **Remove duplicate modules in JavaScript bundles**
 In heel veel JS bestanden van Github zijn er modules (waaronder node_modules) die worden ingeladen die niet worden gebruikt. Hierdoor worden onnodige bytes ingeladen. Als ze deze zouden verwijderen zouden ze hun TBT kunnen verbeteren.
@@ -42,7 +46,7 @@ In heel veel JS bestanden van Github zijn er modules (waaronder node_modules) di
 
 ### Largest Contentful Paint (LCP)
 **Eliminate render-blockink resources**
-//
+Er zijn bepaalde resources die worden ingeladen en daardoor de LCP blocken. Deze kunnen worden opgelost door bijvoorbeeld inline styling te gebruiken doormiddel van een ```<style></style>``` tag of een ```<script></script>```
 
 **Reduce unused CSS**
 Er zijn een paar regels in de CSS bestanden van github die niet worden gebruikt. Als ze deze zouden verwijderen zou de LCP sneller moeten laden.
@@ -54,8 +58,9 @@ Er zijn een paar client side javascript bestanden die niet worden gebruikt. Dit 
 De tab container (aka de feed), de sidebar en de footer zijn grote elementen die zorgen voor een grote layout shift. Ze zouden dit beter kunnen opdelen in meer kleinere elementen.
 
 
-
 ## Bronnen
+[web.dev](https://web.dev/)
+[Google Lighthouse](https://developers.google.com/web/tools/lighthouse)
 
 ## Licentie
 
