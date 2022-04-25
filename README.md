@@ -1,5 +1,7 @@
 # Performance audit Github
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+![image](https://user-images.githubusercontent.com/30351629/165138429-9dce3c0f-8638-42db-a532-2a83eda8faa3.png)
+
 
 
 ## ContentAudit
