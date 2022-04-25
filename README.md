@@ -5,7 +5,6 @@
 
 
 ## ContentAudit
-Beschrijf de website die je hebt geanalyseerd en de datum dat je hebt getest. Voeg de url en een screenshot toe. 
 
 Website: http://github.com  
 Datum: 25-04-2022  
